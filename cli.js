@@ -71,7 +71,7 @@ const data = {
         // .hex("#2b82b2")
         // .bold("FootLoose Labs")}`,
     //twitter: chalk.gray("https://twitter.com/") + chalk.cyan("misteranmol"),
-    github: chalk.gray("https://github.com/") + chalk.green("ivl-nunez"),
+    github: chalk.gray("https://github.com/") + chalk.green("IvI-Nunez"),
     linkedin: chalk.gray("https://linkedin.com/in/") + chalk.blue("newnez"),
     //web: chalk.cyan("https://anmolsingh.me"),
     npx: chalk.red("npx") + " " + chalk.white("nunez"),
@@ -98,15 +98,12 @@ const me = boxen(
         `${data.npx}`,
         ``,
         `${chalk.italic(
-            "I am currently looking for new opportunities,"
+            "Always interested in making new connections!"
         )}`,
-        `${chalk.italic("my inbox is always open. Whether you have a")}`,
+        `${chalk.italic("Send me an email or schedule a meeting.")}`,
         `${chalk.italic(
-            "question or just want to say hi, I will try "
+            "Hope to hear from you soon :) "
         )}`,
-        `${chalk.italic(
-            "my best to get back to you!"
-        )}`
     ].join("\n"),
     {
         margin: 1,
