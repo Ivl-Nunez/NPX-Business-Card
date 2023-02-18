@@ -29,23 +29,24 @@ const questions = [
                     console.log("\nDone, see you soon at inbox.\n");
                 }
             },
-            // {
-            //     name: `Download my ${chalk.magentaBright.bold("Resume")}?`,
-            //     value: () => {
-            //         // cliSpinners.dots;
-            //         const loader = ora({
-            //             text: ' Downloading Resume',
-            //             spinner: cliSpinners.material,
-            //         }).start();
-            //         let pipe = request('https://anmolsingh.me/api/resume').pipe(fs.createWriteStream('./anmol-resume.html'));
-            //         pipe.on("finish", function () {
-            //             let downloadPath = path.join(process.cwd(), 'anmol-resume.html')
-            //             console.log(`\nResume Downloaded at ${downloadPath} \n`);
-            //             open(downloadPath)
-            //             loader.stop();
-            //         });
-            //     }
-            // },
+            {
+                name: `Download my ${chalk.magentaBright.bold("Resume")}?`,
+                value: () => {
+                    // cliSpinners.dots;
+                    const loader = ora({
+                        text: ' Downloading Resume',
+                        spinner: cliSpinners.material,
+                    }).start();
+                    let pipe = request('https://docs.google.com/document/d/e/2PACX-1vRJ1x4hun5VZq1q55PIaBrw7DPoi9CQgb3IQjR6QKRK6HAFS7qoXTltmsS-98fkTg/pub').pipe(fs.createWriteStream('./michael-nunez-resume.docx'));
+                    pipe.on("finish", function () {
+                        let downloadPath = path.join(process.cwd(), 'michael-nunez-resume.docx')
+                        console.log(`\nResume Downloaded at ${downloadPath} \n`);
+                        open(downloadPath)
+                        loader.stop();
+                    });
+                }
+            },
+
             {
                 name: `Schedule a ${chalk.redBright.bold("Meeting")}?`,
                 value: () => {
